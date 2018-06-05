@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.andrew.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:clickable="true"
+    android:focusable="false">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bground"
+        android:background="@drawable/garden"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tableRow">
+
+    </TableRow>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/feed_text"
+        android:id="@+id/feedButton"
+        android:onClick="feedPet"
+        android:layout_gravity="center_horizontal"
+        android:background="?attr/colorAccent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/walkButton" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bath_text"
+        android:onClick="bathPet"
+        android:id="@+id/bathButton"
+        android:layout_gravity="center_horizontal"
+        android:background="?attr/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/walk_text"
+        android:id="@+id/walkButton"
+        android:onClick="walkPet"
+        android:background="?attr/colorAccent"
+        android:layout_alignTop="@+id/bathButton"
+        android:layout_toLeftOf="@+id/bathButton"
+        android:layout_toStartOf="@+id/bathButton" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/feedButton"
+        android:src="#735b5b"
+        android:layout_alignRight="@+id/bathButton"
+        android:layout_alignEnd="@+id/bathButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="205dp"
+            android:id="@+id/virtualPet"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewLegs">
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewArms">
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewBody">
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewHead"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentEnd="false">
+            </ImageView>
+            <RelativeLayout
+                android:layout_width="71dp"
+                android:layout_height="60dp"
+                android:id="@+id/imageLayoutFace"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewFace">
+            </ImageView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/textbox"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name"
+            android:id="@+id/textPetName"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="false"
+            android:paddingTop="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
